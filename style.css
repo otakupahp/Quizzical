@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #293264;
+}
+
+main {
+    padding: 0 50px;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+main > * {
+    z-index: 0;
+    position: relative;
+}
+
+main:before, main:after {
+    content: " ";
+    position: fixed;
+    width: 300px;
+    height: 150px;
+    border-radius: 50%;
+    transform: rotate(-128.49deg);
+    z-index: -1;
+}
+
+main:before {
+    background-color: #FFFAD1;
+    top: -30px;
+    right: -90px;
+}
+
+main:after {
+    background-color: #DEEBF8;
+    bottom: -30px;
+    left: -90px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+button { 
+    width: 190px;
+    height: 50px;
+    background-color: #4D5B9E;
+    border-radius: 15px;
+    color: #ffffff;
+    display: block;
+    cursor: pointer;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+.start h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 37px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.start p { 
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    color: #293264;
+    margin: 5px 0 40px;
+}
+
+.questions {
+    padding: 15px 50px;
+}
+
+.question {
+    border-bottom: 1px solid #DBDEF0;
+}
+
+.question h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.options {
+    display: flex;
+    margin: 10px 0 15px;
+    flex-wrap: wrap;
+}
+
+.option {
+    border: 1px solid #4D5B9E;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.option:not(.checked-option):hover{
+    background-color: #4D5B9E;
+    color: #ffffff;
+}
+
+.checked-option {
+    background-color: #D6DBF57F;
+    border-color: #D6DBF57F;
+    cursor: unset;
+}
+
+.answered .option.checked-option:not(.answer) {
+    background-color: #F8BCBC;
+    border-color: #F8BCBC;
+}
+
+.answered .option.answer {
+    background-color: #94D7A2;
+    border-color: #94D7A2;
+}
+
+.score {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+}
